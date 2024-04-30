@@ -76,9 +76,9 @@ public class CommentController {
 
     @GetMapping("/comment")
     //public ResponseEntity<?> getCommentDetails(@RequestBody GetCommentRequest request) {
-    public ResponseEntity<?> getCommentDetails(@RequestParam Long commentID) {
+    public ResponseEntity<?> getCommentDetails(@RequestParam Long CommentID) {
 
-        Comment comment = commentService.getCommentDetails(commentID);
+        Comment comment = commentService.getCommentDetails(CommentID);
 
         if (comment != null) {
             Map<String, Object> commentMap = new LinkedHashMap<>();
